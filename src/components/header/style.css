@@ -1,0 +1,27 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0.5rem 1rem;
+}
+
+.header__logo h1 {
+  margin: 0;
+}
+
+.header__search {
+  display: flex;
+}
+
+.header__search input {
+  padding: 0.5rem 2rem;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #525355;
+  outline: unset;
+  border: unset;
+}
+
+.header__search input::placeholder {
+  color: rgb(178, 178, 178);
+  opacity: 1;
+}

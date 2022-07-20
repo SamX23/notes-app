@@ -1,11 +1,13 @@
+import "./style.css";
+
 const Header = () => {
   return (
-    <header>
-      <div>
+    <header className="header">
+      <div className="header__logo">
         <h1>Notes App</h1>
       </div>
-      <div>
-        <input type="text" />
+      <div className="header__search">
+        <input type="text" placeholder="Search" />
       </div>
     </header>
   );

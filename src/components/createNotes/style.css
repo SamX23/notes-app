@@ -1,0 +1,81 @@
+.notes__form {
+  width: 75vw;
+  max-width: 600px;
+  margin: auto;
+}
+
+.notes__formGroup {
+  margin-bottom: 0.5rem;
+}
+
+.notes__form form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid rgb(108, 108, 108);
+  border-radius: 10px;
+}
+
+.notes__form form label {
+  display: none;
+}
+
+.notes__form form input,
+.notes__form form textarea {
+  background-color: #202124;
+  color: white;
+  border: unset;
+  outline: unset;
+  width: 100%;
+}
+
+.notes__form form input::placeholder,
+.notes__form form textarea::placeholder {
+  color: rgb(178, 178, 178);
+  opacity: 1;
+}
+
+.notes__form form input {
+  font-weight: 900;
+}
+
+.notes__form form textarea {
+  resize: none;
+}
+
+.notes__formFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notes__formCheckbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.notes__formCheckbox label {
+  display: block !important;
+  color: rgb(178, 178, 178);
+  margin-left: 0.5rem;
+}
+.notes__formCheckbox input {
+  background-color: #525355 !important;
+}
+
+.notes__form form button {
+  border: unset;
+  outline: unset;
+  color: white;
+  font-weight: bold;
+  background-color: unset;
+  padding: 0.7rem 1.5rem;
+  transition: background-color 0.2s;
+  border-radius: 5px;
+  align-self: flex-end;
+}
+
+.notes__form form button:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+}
