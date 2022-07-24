@@ -1,11 +1,10 @@
-import ActiveNotes from "./ActiveNotes";
-import ArchivedNotes from "./ArchivedNotes";
+import NotesContainer from "./noteContainer";
 
 const Notes = ({ data }) => {
   return (
     <div className="container">
-      <ActiveNotes data={data} />
-      <ArchivedNotes data={data} />
+      <NotesContainer title="Notes" data={data} />
+      <NotesContainer title="Archives" data={data} />
     </div>
   );
 };
