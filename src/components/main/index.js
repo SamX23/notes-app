@@ -9,7 +9,9 @@ const Main = () => {
 
   return (
     <main>
-      <CreateNotes setData={setData} />
+      <div className="form-container">
+        <CreateNotes setData={setData} />
+      </div>
       <Notes data={data} />
     </main>
   );

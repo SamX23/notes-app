@@ -1,11 +1,11 @@
-import NotesContainer from "./noteContainer";
+import NotesContainer from "./notesContainer";
 
 const Notes = ({ data }) => {
   return (
-    <div className="container">
+    <>
       <NotesContainer title="Notes" data={data} />
       <NotesContainer title="Archives" data={data} />
-    </div>
+    </>
   );
 };
 

@@ -1,9 +1,11 @@
+import "./style.css";
+
 const Footer = () => {
   return (
     <footer>
       <span>
         Ngoding with
-        <span role="img" aria-label="love">
+        <span className="love" role="img" aria-label="love">
           {" "}
           ♥️{" "}
         </span>

@@ -1,4 +1,5 @@
 import Note from "../note";
+import "./style.css";
 
 const NotesContainer = ({ title, data }) => {
   const activeNotes =
@@ -16,10 +17,10 @@ const NotesContainer = ({ title, data }) => {
     );
 
   return (
-    <div className="active-notes">
-      <h2>{title}</h2>
-      <div className="notes-container">
-        {title == "Notes" ? activeNotes : archivedNotes}
+    <div class="notes-container">
+      <h2 className="notes-containerTitle">{title}</h2>
+      <div className="notes-containerGrid">
+        {title === "Notes" ? activeNotes : archivedNotes}
       </div>
     </div>
   );

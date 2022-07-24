@@ -1,0 +1,23 @@
+.notes-container {
+  margin-bottom: 1.5rem;
+}
+.notes-containerTitle {
+  color: rgb(156, 156, 156);
+  text-transform: uppercase;
+  font-size: small;
+  margin-left: 1rem;
+}
+
+.notes-containerGrid {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.notes-containerGrid .card {
+  width: 240px;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}

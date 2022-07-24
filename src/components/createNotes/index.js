@@ -1,5 +1,6 @@
 import { useState } from "react";
 import getCurrentDate from "../../utils/currentDate";
+import Card from "../card";
 import "./style.css";
 
 const CreateNotes = ({ setData }) => {
@@ -32,8 +33,8 @@ const CreateNotes = ({ setData }) => {
   };
 
   return (
-    <div id="create-notes" className="notes__form">
-      <form onSubmit={onSubmitListener}>
+    <Card id="create-notes">
+      <form onSubmit={onSubmitListener} className="notes__form">
         <div className="notes__formGroup">
           <label htmlFor="notes-title">Title</label>
           <input
@@ -69,7 +70,7 @@ const CreateNotes = ({ setData }) => {
           <button type="submit">Submit</button>
         </div>
       </form>
-    </div>
+    </Card>
   );
 };
 
