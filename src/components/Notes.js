@@ -1,6 +1,6 @@
 import NotesContainer from "./notesContainer";
 
-const Notes = ({ data, onDelete }) => {
+const Notes = ({ data, setData }) => {
   const getActiveNotes = () => {
     let newData = [];
     data.map((item) => !item.archived && newData.push(item));
@@ -17,18 +17,14 @@ const Notes = ({ data, onDelete }) => {
 
   return (
     <>
-      <NotesContainer
-        title="Notes"
-        data={getActiveNotes()}
-        onDelete={onDelete}
-      />
+      <NotesContainer title="Notes" data={getActiveNotes()} setData={setData} />
 
       {/* Sengaja dihide jika tidak ada archived notes demi UX yang lebih baik, menurut saya */}
       {getArchivedNotes().length > 0 && (
         <NotesContainer
           title="Archives"
           data={getArchivedNotes()}
-          onDelete={onDelete}
+          setData={setData}
         />
       )}
     </>

@@ -20,7 +20,7 @@ const Note = ({ item, onDelete, setUnArchive, setArchive }) => {
         {archived ? (
           <button
             className="note-archiveBtn"
-            onClick={() => setUnArchive(id)}
+            onClick={() => setUnArchive(id, title)}
             title="Un Archive"
           >
             <FontAwesomeIcon icon={faArrowUpFromBracket} />
@@ -28,7 +28,7 @@ const Note = ({ item, onDelete, setUnArchive, setArchive }) => {
         ) : (
           <button
             className="note-archiveBtn"
-            onClick={() => setArchive(id)}
+            onClick={() => setArchive(id, title)}
             title="Archive"
           >
             <FontAwesomeIcon icon={faArchive} />
