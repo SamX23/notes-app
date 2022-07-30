@@ -1,5 +1,6 @@
 import { useState } from "react";
 import getCurrentDate from "../../utils/currentDate";
+import toastSuccess from "../../utils/toastify";
 import Card from "../card";
 import "./style.css";
 
@@ -51,6 +52,7 @@ const CreateNotes = ({ setData }) => {
 
     if (body.length !== 0) {
       setData((state) => [...state, newData]);
+      toastSuccess("Notes created!");
       setTitle("");
       setBody("");
       setArchived(false);
