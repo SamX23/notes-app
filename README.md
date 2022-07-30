@@ -1,12 +1,15 @@
-## Kriteria
+## Notes App
 
-### Optional
+A simple notes app, design inspired by google keep
 
-#### Terdapat Fitur Pencarian
+Feature :
 
-Aplikasi memiliki fitur pencarian catatan berdasarkan kata kunci yang dimasukkan, dengan ketentuan:
-Jika kolom pencarian tidak kosong, maka aplikasi hanya menampilkan daftar catatan yang judulnya mengandung kata kunci yang dimasukkan.
-Jika kolom pencariannya kosong, maka aplikasi menampilkan seluruh catatan.
-Memanfaatkan controlled component dalam membangun fitur catatan.
+- Add notes
+- Set archive/active notes
+- Search notes
 
-#### Terdapat Fitur Arsip Catatan
+Library used :
+
+- React
+- Toastify (Notification)
+- Fontawesome (Icons)
