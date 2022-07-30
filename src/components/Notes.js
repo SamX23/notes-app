@@ -22,6 +22,8 @@ const Notes = ({ data, onDelete }) => {
         data={getActiveNotes()}
         onDelete={onDelete}
       />
+
+      {/* Sengaja dihide jika tidak ada archived notes demi UX yang lebih baik, menurut saya */}
       {getArchivedNotes().length > 0 && (
         <NotesContainer
           title="Archives"

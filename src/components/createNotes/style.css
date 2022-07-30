@@ -28,10 +28,13 @@
 
 .notes__form textarea {
   resize: none;
+  font-family: sans-serif;
+  max-height: 300px;
 }
 
 .notes__formGroup {
   margin-bottom: 0.5rem;
+  position: relative;
 }
 
 .notes__formFooter {
@@ -69,4 +72,32 @@
 
 .notes__form button:hover {
   background-color: rgba(255, 255, 255, 0.18);
+}
+
+.notes__form .counter {
+  font-size: small;
+  color: gray;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.notes__portable .notes__formFooter,
+.notes__portable .notes__formGroup:first-of-type,
+.notes__portable .counter {
+  display: none;
+}
+
+.notes__portable .notes__formGroup {
+  margin: 0;
+}
+
+.notes__portable .notes__formGroup textarea {
+  overflow: hidden;
+}
+
+.notes__portable .notes__formGroup textarea::placeholder {
+  font-size: large;
+  font-weight: bold;
 }

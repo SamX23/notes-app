@@ -1,6 +1,7 @@
 .notes-container {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 1rem;
 }
+
 .notes-containerTitle {
   color: rgb(156, 156, 156);
   text-transform: uppercase;
@@ -25,4 +26,6 @@
 .notes-containerEmpty {
   margin: auto;
   padding: 10vh 0;
+  text-align: center;
+  line-height: 1.25rem;
 }

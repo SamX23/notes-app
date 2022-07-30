@@ -7,14 +7,34 @@ const CreateNotes = ({ setData }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [archived, setArchived] = useState(false);
+  const [visibilityClass, setVisibilityClass] = useState("notes__portable");
+  const [currentTitleLength, setCurrentTitleLength] = useState(0);
+  const [currentDescLength, setCurrentDescLength] = useState(0);
+
+  let titleLength = 25;
+  let descLength = 2000;
 
   const onChangeTitleListener = (e) => {
     e.preventDefault();
+    const inputLength = e.currentTarget.value.length;
 
-    setTitle(e.currentTarget.value);
+    if (inputLength <= titleLength) {
+      setCurrentTitleLength(inputLength);
+      setTitle(e.currentTarget.value);
+    }
   };
 
-  const onChangeBodyListener = (e) => setBody(e.currentTarget.value);
+  const onChangeBodyListener = (e) => {
+    const inputLength = e.currentTarget.value.length;
+
+    e.currentTarget.style.height = "auto";
+    e.currentTarget.style.height = e.currentTarget.scrollHeight + "px";
+
+    if (inputLength <= descLength) {
+      setCurrentDescLength(inputLength);
+      setBody(e.currentTarget.value);
+    }
+  };
 
   const onChangeArchivedListener = (e) => setArchived(e.currentTarget.checked);
 
@@ -30,22 +50,29 @@ const CreateNotes = ({ setData }) => {
     };
 
     setData((state) => [...state, newData]);
+    setVisibilityClass("notes__portable");
   };
 
   return (
     <Card id="create-notes">
-      <form onSubmit={onSubmitListener} className="notes__form">
+      <form
+        onSubmit={onSubmitListener}
+        className={`notes__form ${visibilityClass}`}
+      >
         <div className="notes__formGroup">
           <label htmlFor="notes-title">Title</label>
           <input
             type="text"
-            maxLength="50"
             id="notes-title"
             value={title}
             placeholder="Title"
             onChange={onChangeTitleListener}
           />
+          <span className="counter">
+            {currentTitleLength}/{titleLength}
+          </span>
         </div>
+
         <div className="notes__formGroup">
           <label htmlFor="notes-desc">Description</label>
           <textarea
@@ -54,7 +81,11 @@ const CreateNotes = ({ setData }) => {
             value={body}
             placeholder="Take a note..."
             onChange={onChangeBodyListener}
+            onFocus={() => setVisibilityClass("")}
           ></textarea>
+          <span className="counter">
+            {currentDescLength}/{descLength}
+          </span>
         </div>
 
         <div className="notes__formFooter">

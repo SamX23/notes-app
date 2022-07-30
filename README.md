@@ -1,13 +1,3 @@
-### Second
-
-Aplikasi harus mampu menambahkan data catatan baru.
-Memanfaatkan controlled component dalam membuat form input.
-Data catatan disimpan cukup pada memori saja (akan hilang jika browser di-refresh).
-
-### Third
-
-Aplikasi harus menyediakan tombol hapus untuk menghapus data catatan yang disimpan.
-
 ### Optional
 
 #### Terdapat Fitur Pencarian
