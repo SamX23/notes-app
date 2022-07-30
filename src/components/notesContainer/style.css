@@ -17,6 +17,12 @@
   position: relative;
 }
 
+@media (max-width: 900px) {
+  .notes-containerGrid {
+    justify-content: center;
+  }
+}
+
 .notes-containerGrid .card {
   width: 240px;
   -webkit-transition-duration: 0.5s;
