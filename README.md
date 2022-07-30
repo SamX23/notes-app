@@ -7,11 +7,6 @@ Jika kolom pencarian tidak kosong, maka aplikasi hanya menampilkan daftar catata
 Jika kolom pencariannya kosong, maka aplikasi menampilkan seluruh catatan.
 Memanfaatkan controlled component dalam membangun fitur catatan.
 
-#### Terdapat Limit Karakter pada Input Judul Catatan
-
-Menggunakan state dalam melimitasi, bukan atribut maxlength.
-Menampilkan jumlah karakter tersisa yang dapat digunakan oleh pengguna
-
 #### Terdapat Fitur Arsip Catatan
 
 Initial data berada di berkas src -> utils -> index.js.

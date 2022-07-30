@@ -17,3 +17,33 @@
   font-weight: normal;
   color: #707070;
 }
+
+.note-btnGroup {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.note-btnGroup button {
+  opacity: 0.8;
+}
+
+.note-btnGroup button:hover {
+  opacity: 1;
+}
+
+.note-btnGroup button:active {
+  transform: translateY(2px);
+}
+
+.note-deleteBtn {
+  color: white;
+  padding: 0.5rem 1rem;
+  background-color: red;
+}
+
+.note-archiveBtn {
+  color: white;
+  padding: 0.5rem 1rem;
+  background-color: #8d8d8d;
+}

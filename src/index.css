@@ -14,3 +14,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
+
+button {
+  cursor: pointer;
+  border: unset;
+  border-radius: 5px;
+  outline: unset;
+}

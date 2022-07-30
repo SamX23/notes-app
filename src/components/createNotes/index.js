@@ -11,8 +11,8 @@ const CreateNotes = ({ setData }) => {
   const [currentTitleLength, setCurrentTitleLength] = useState(0);
   const [currentDescLength, setCurrentDescLength] = useState(0);
 
-  let titleLength = 25;
-  let descLength = 2000;
+  let titleLength = 35;
+  let descLength = 1500;
 
   const onChangeTitleListener = (e) => {
     e.preventDefault();
@@ -49,8 +49,13 @@ const CreateNotes = ({ setData }) => {
       archived: archived,
     };
 
-    setData((state) => [...state, newData]);
-    setVisibilityClass("notes__portable");
+    if (body.length !== 0) {
+      setData((state) => [...state, newData]);
+      setTitle("");
+      setBody("");
+      setArchived(false);
+      setVisibilityClass("notes__portable");
+    }
   };
 
   return (
@@ -90,7 +95,7 @@ const CreateNotes = ({ setData }) => {
 
         <div className="notes__formFooter">
           <div className="notes__formCheckbox">
-            <label htmlFor="notes-archive">Archive</label>
+            <label htmlFor="notes-archive">Archive ?</label>
             <input
               type="checkbox"
               id="notes-archive"

@@ -38,9 +38,11 @@
 }
 
 .notes__formFooter {
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  white-space: nowrap;
 }
 
 .notes__formCheckbox {
@@ -54,19 +56,16 @@
   color: rgb(178, 178, 178);
   margin-left: 0.5rem;
 }
+
 .notes__formCheckbox input {
   background-color: #525355 !important;
 }
 
 .notes__form button {
-  border: unset;
-  outline: unset;
   color: white;
-  font-weight: bold;
   background-color: unset;
-  padding: 0.7rem 1.5rem;
+  padding: 0.5rem 1.25rem;
   transition: background-color 0.2s;
-  border-radius: 5px;
   align-self: flex-end;
 }
 
@@ -78,9 +77,6 @@
   font-size: small;
   color: gray;
   float: right;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .notes__portable .notes__formFooter,
