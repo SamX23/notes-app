@@ -2,12 +2,7 @@ import toastSuccess from "../../utils/toastify";
 import Note from "../note";
 import "./style.css";
 
-const NotesContainer = ({ title, data, setData }) => {
-  const onDelete = (id) => {
-    setData(data.filter((note) => note.id !== id));
-    toastSuccess("Notes deleted!");
-  };
-
+const NotesContainer = ({ title, data, setData, onDelete }) => {
   const changeArchiveStatus = (id, value) =>
     setData((prevState) => {
       const newState = prevState.map((obj) => {
